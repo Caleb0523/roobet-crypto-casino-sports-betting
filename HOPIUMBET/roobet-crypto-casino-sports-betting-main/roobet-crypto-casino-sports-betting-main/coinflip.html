@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOPIUMBET | Coinflip Game - Bet Any Crypto</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/coinflip.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/my-new-logo.png" alt="HOPIUMBET" style="width: 50px; height: 50px;">
+                <span class="logo-text">HOPIUMBET</span>
+            </div>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="index.html#casino" class="nav-link">Casino</a></li>
+                    <li class="nav-item"><a href="index.html#sportsbook" class="nav-link">Sportsbook</a></li>
+                    <li class="nav-item"><a href="coinflip.html" class="nav-link">Coinflip</a></li>
+                    <li class="nav-item wallet-section">
+                        <button id="connect-wallet-btn" class="btn btn-wallet">Connect Wallet</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Coinflip Game</h2>
+                    <p>Heads or Tails - Bet any cryptocurrency</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="startCoinflip()">Play Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="coinflip-section">
+            <div class="container">
+                <h2 class="section-title">Coinflip Game</h2>
+                
+                <div class="coinflip-container">
+                    <div class="game-interface">
+                        <div class="coin-display">
+                            <div class="coin" id="coin">
+                                <div class="coin-side heads">HEADS</div>
+                                <div class="coin-side tails">TAILS</div>
+                            </div>
+                        </div>
+                        
+                        <div class="betting-interface">
+                            <!-- Wallet Info Section -->
+                            <div id="wallet-info" class="wallet-info" style="display: none;"></div>
+                            <div id="wallet-balance" class="wallet-balance"></div>
+                            
+                            <!-- Mode Toggle -->
+                            <div id="mode-toggle" class="mode-toggle" style="display: none;">
+                                <label class="mode-label">Game Mode:</label>
+                                <div class="mode-options">
+                                    <label class="radio-label">
+                                        <input type="radio" name="game-mode" id="demo-mode" value="demo" checked>
+                                        <span class="radio-custom"></span>
+                                        Demo Mode
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="game-mode" id="blockchain-mode" value="blockchain">
+                                        <span class="radio-custom"></span>
+                                        Blockchain Mode
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="crypto-selector">
+                                <label for="crypto-select">Choose Crypto:</label>
+                                <select id="crypto-select">
+                                    <option value="BTC">Bitcoin (BTC)</option>
+                                    <option value="USDT">Tether (USDT)</option>
+                                    <option value="USDC">USDC</option>
+                                    <option value="ETH">Ethereum (ETH)</option>
+                                    <option value="SOL">Solana (SOL)</option>
+                                    <option value="XRP">Ripple (XRP)</option>
+                                    <option value="TRX">TRON (TRX)</option>
+                                    <option value="LTC">Litecoin (LTC)</option>
+                                    <option value="DOGE">Dogecoin (DOGE)</option>
+                                    <option value="CASH">Cash (CASH)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="bet-amount">
+                                <label for="bet-amount">Bet Amount:</label>
+                                <input type="number" id="bet-amount" min="0.0001" step="0.0001" placeholder="0.001" value="0.001">
+                                <span id="selected-crypto-symbol">BTC</span>
+                            </div>
+                            
+                            <div class="choice-selector">
+                                <label>Choose Side:</label>
+                                <div class="choice-buttons">
+                                    <button class="choice-btn" data-choice="heads">HEADS</button>
+                                    <button class="choice-btn" data-choice="tails">TAILS</button>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary" id="flip-button" onclick="flipCoin()">Flip Coin</button>
+                        </div>
+                        
+                        <div class="game-result" id="game-result" style="display: none;">
+                            <h3 id="result-title">Result</h3>
+                            <p id="result-text"></p>
+                            <button class="btn btn-secondary" onclick="resetGame()">Play Again</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Casino</h3>
+                    <ul>
+                        <li><a href="index.html#popular-games">Popular Games</a></li>
+                        <li><a href="index.html#slots">Slots</a></li>
+                        <li><a href="index.html#bonus-buys">Bonus Buys</a></li>
+                        <li><a href="index.html#live-casino">Live Casino</a></li>
+                        <li><a href="index.html#game-shows">Game Shows</a></li>
+                        <li><a href="index.html#roulette">Roulette</a></li>
+                        <li><a href="index.html#blackjack">Blackjack</a></li>
+                        <li><a href="index.html#baccarat">Baccarat</a></li>
+                        <li><a href="index.html#fair">Fair</a></li>
+                        <li><a href="coinflip.html">Coinflip</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Sportsbook</h3>
+                    <ul>
+                        <li><a href="index.html#soccer">Soccer</a></li>
+                        <li><a href="index.html#basketball">Basketball</a></li>
+                        <li><a href="index.html#tennis">Tennis</a></li>
+                        <li><a href="index.html#counter-strike">Counter-Strike</a></li>
+                        <li><a href="index.html#fifa">FIFA</a></li>
+                        <li><a href="index.html#baseball">Baseball</a></li>
+                        <li><a href="index.html#ice-hockey">Ice-Hockey</a></li>
+                        <li><a href="index.html#cricket">Cricket</a></li>
+                        <li><a href="index.html#mma">MMA</a></li>
+                        <li><a href="index.html#table-tennis">Table Tennis</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/web3-integration.js"></script>
+    <script src="js/coinflip.js"></script>
+</body>
+</html>
