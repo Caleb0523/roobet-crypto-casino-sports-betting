@@ -123,8 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
         languageSelector.addEventListener('change', function() {
             const selectedLanguage = this.value;
             console.log('Language changed to:', selectedLanguage);
-            // Here you would typically handle language switching
-            // For demo purposes, we'll just log it
+            // Handle language switching here
         });
     }
 
@@ -134,30 +133,25 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-2px) scale(1.02)';
         });
-        
         link.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1)';
         });
     });
 
-    // Button click animations
+    // Button click animations with ripple effect
     const buttons = document.querySelectorAll('.btn');
     buttons.forEach(button => {
         button.addEventListener('click', function(e) {
-            // Create ripple effect
             const ripple = document.createElement('span');
             const rect = this.getBoundingClientRect();
             const size = Math.max(rect.width, rect.height);
             const x = e.clientX - rect.left - size / 2;
             const y = e.clientY - rect.top - size / 2;
-            
             ripple.style.width = ripple.style.height = size + 'px';
             ripple.style.left = x + 'px';
             ripple.style.top = y + 'px';
             ripple.classList.add('ripple');
-            
             this.appendChild(ripple);
-            
             setTimeout(() => {
                 ripple.remove();
             }, 600);
@@ -171,7 +165,6 @@ document.addEventListener('DOMContentLoaded', function() {
             position: relative;
             overflow: hidden;
         }
-        
         .ripple {
             position: absolute;
             border-radius: 50%;
@@ -180,7 +173,6 @@ document.addEventListener('DOMContentLoaded', function() {
             animation: ripple-animation 0.6s linear;
             pointer-events: none;
         }
-        
         @keyframes ripple-animation {
             to {
                 transform: scale(4);
@@ -250,7 +242,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Handle window resize
     window.addEventListener('resize', function() {
-        // Close mobile menu on resize to desktop
         if (window.innerWidth > 768) {
             hamburger.classList.remove('active');
             navLinks.classList.remove('active');
@@ -262,7 +253,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add keyboard navigation support
     document.addEventListener('keydown', function(e) {
-        // Close mobile menu with Escape key
         if (e.key === 'Escape') {
             if (navLinks && navLinks.classList.contains('active')) {
                 hamburger.classList.remove('active');
@@ -277,7 +267,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add any scroll-based animations here
         ticking = false;
     }
-
     window.addEventListener('scroll', function() {
         if (!ticking) {
             requestAnimationFrame(updateOnScroll);
@@ -285,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Add error handling for failed image loads (if any images are added later)
+    // Error handling for images
     document.addEventListener('error', function(e) {
         if (e.target.tagName === 'IMG') {
             e.target.style.display = 'none';
@@ -293,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, true);
 
-    // Initialize tooltips for accessibility
+    // Initialize tooltips
     const elementsWithTitles = document.querySelectorAll('[title]');
     elementsWithTitles.forEach(element => {
         element.addEventListener('mouseenter', function() {
@@ -312,24 +301,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 white-space: nowrap;
             `;
             document.body.appendChild(tooltip);
-            
             const rect = this.getBoundingClientRect();
             tooltip.style.left = rect.left + 'px';
             tooltip.style.top = (rect.top - tooltip.offsetHeight - 5) + 'px';
-            
+
             this.addEventListener('mouseleave', function() {
                 tooltip.remove();
             }, { once: true });
         });
     });
 
-    console.log('Roobet clone initialized successfully!');
+    // Log initialization with new name
+    console.log('HOPIUMBET clone initialized successfully!');
 });
 
 // Service Worker registration for PWA capabilities (optional)
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-        // Uncomment the following lines if you want to add PWA capabilities
+        // Uncomment and modify the path if needed
         // navigator.serviceWorker.register('/sw.js')
         //     .then(function(registration) {
         //         console.log('ServiceWorker registration successful');

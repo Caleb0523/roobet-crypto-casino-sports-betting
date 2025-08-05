@@ -3,10 +3,10 @@ Built by https://www.blackbox.ai
 
 ---
 
-# Roobet | Best Crypto Casino & Online Sports Betting
+# HOPIUMBET | Best Crypto Casino & Online Sports Betting
 
 ## Project Overview
-Roobet is an online platform offering a variety of gaming experiences, including casino games and sports betting. It allows users to play legendary games and win big using cryptocurrency. The site features a sleek design, user-friendly interface, and provides engagement through various promotions and a VIP club.
+HOPIUMBET is an online platform offering a variety of gaming experiences, including casino games and sports betting. It allows users to play legendary games and win big using cryptocurrency. The site features a sleek design, user-friendly interface, and provides engagement through various promotions and a VIP club.
 
 ## Installation
 To run this project locally, you need to clone the repository and open the `index.html` file in a web browser. If you don't have a web server installed, you'll be able to view the site directly by opening the HTML file from your file system.
@@ -14,11 +14,11 @@ To run this project locally, you need to clone the repository and open the `inde
 ### Steps:
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/roobet.git
+    git clone https://github.com/yourusername/hopiumbet.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd roobet
+    cd hopiumbet
     ```
 3. Open `index.html` in your preferred web browser.
 
@@ -30,7 +30,7 @@ Once opened, you can navigate through the various sections of the site:
 - **Accepted Currencies:** Review the cryptocurrency options available for transactions.
 
 ## Features
-- **Diverse Casino Offerings:** A wide array of games such as Roobet Originals, live dealer games, and popular slots.
+- **Diverse Casino Offerings:** A wide array of games such as HOPIUMBET Originals, live dealer games, and popular slots.
 - **Sports Betting:** Offers betting options across multiple sports such as soccer, basketball, and more.
 - **Promotions:** Attractive promotions like Refer & Earn, bonus offerings, and a dedicated VIP club.
 - **Multi-Language Support:** Available in multiple languages to cater to a global audience.
@@ -42,15 +42,15 @@ This project does not have any specific dependencies listed in the provided cont
 ## Project Structure
 The basic structure of the project is as follows:
 
-```
-roobet
+ ```
+hopiumbet
 │
 ├── index.html              # Main HTML file
 ├── css
 │   └── styles.css          # Stylesheet for the website
 └── js
     └── main.js             # JavaScript file for interactivity
-```
+ ```
 
 ### Additional Notes
 - Ensure you have a modern web browser to view the website as intended, as older versions may not fully support some CSS and JavaScript features.
